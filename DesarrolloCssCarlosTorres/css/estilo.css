@@ -1,0 +1,244 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.contenido {
+	width: 900px;
+	margin: 0 auto;
+}
+
+header,
+section,
+footer {
+	width: 100%;
+	font-family: 'Heebo', sans-serif;
+	/*font-family: 'Dancing Script', cursive;*/
+	font-weight: 300;
+	background-color: #82c3a6;
+}
+
+header {
+	background-color: #5b7989;
+	color: #fff;
+	border-radius: 12px 12px 0px 0px;
+	display: table;
+	height: 10vh;
+	padding: 0 4%;
+	animation: headerani 2s;
+
+}
+
+@-webkit-keyframes headerani {
+	0% {
+		margin-top: 150%;
+	}
+
+	60% {
+		margin-top: -5%;
+	}
+
+	100% {
+		margin-top: 0%;
+	}
+}
+
+nav ul li {
+	list-style: none;
+	display: inline-block;
+	padding: 0 10px;
+}
+
+nav ul li a {
+	color: #fff;
+}
+
+nav ul li a.active {
+	text-decoration: none;
+}
+
+nav {
+	float: right;
+	display: table;
+	height: 100%;
+}
+
+header h1 {
+	display: table-cell;
+	vertical-align: middle;
+	text-shadow: 2px 2px #02010a;
+}
+
+header h1,
+	{
+	display: inline-block;
+}
+
+nav ul {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+section {
+	padding: 3% 0;
+}
+
+section img {
+	width: 80%;
+	margin-left: 10%;
+}
+
+aside {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	background-color: #d5c75f;
+}
+
+aside a {
+	width: 40%;
+	margin: 4% 5%;
+
+}
+
+aside a img {
+	width: 100%;
+	align-self: center;
+	border: 1px solid;
+	transition: 1s;
+}
+
+img#paisajeimg:hover {
+	transform: rotate(10deg);
+	box-shadow: 3px 3px 5px #82c3a6;
+	border: 2px solid #82c3a6;
+
+}
+
+img#retratoimg:hover {
+	transform: translate(20px, -5px);
+	box-shadow: 3px 3px 5px #82c3a6;
+	border: 2px solid #82c3a6;
+
+}
+
+footer {
+	border-radius: 0px 0px 8px 8px;
+	background-color: #C6d5c5;
+}
+
+footer div {
+	display: inline-block;
+	width: 24.5%;
+	padding-left: 4%;
+	padding: 3% 0 3% 4%;
+	vertical-align: top;
+}
+
+footer div h1 {
+	font-size: 25px;
+}
+
+ul.pie li a {
+	color: #000;
+}
+
+ul.pie li {
+	list-style: none;
+	display: table;
+
+}
+
+ul.pie li span {
+	vertical-align: middle;
+	display: table-cell;
+}
+
+ul.pie li span img {
+	vertical-align: middle;
+	display: table-cell;
+}
+
+/* --- Estilos página paisajes --- */
+
+
+div.galeria img {
+	width: 29%;
+	margin-left: 3%;
+}
+
+div.galeria:nth-child(2) {
+	margin-top: 25px;
+}
+
+div.galeria:nth-child(1) img:nth-child(1) {
+	filter: blur(10px);
+
+}
+
+div.galeria:nth-child(1) img:nth-child(3) {
+	filter: sepia(90%);
+
+}
+
+div.galeria:nth-child(1) img:nth-child(2),
+div.galeria:nth-child(2) img:nth-child(odd) {
+	filter: grayscale(100%)
+}
+
+/* ---- MOBILE ---- */
+
+@media screen and (max-width: 900px) {
+	header {
+		padding: 4% 4%;
+	}
+
+	header h1 {
+		line-height: 1.2em;
+		padding-bottom: 3%;
+	}
+
+	header h1,
+	nav,
+	nav ul {
+		width: 100%;
+		text-align: center;
+		display: block;
+		height: auto;
+	}
+
+
+	aside {
+		flex-direction: column;
+	}
+
+	aside a {
+		width: 80%;
+		margin: 4% 10%;
+	}
+
+
+	/* --- Estilos página paisajes --- */
+	.contenido {
+		width: 100%;
+	}
+
+	div.galeria img {
+		width: 80%;
+		display: block;
+		margin: 3% 10% 7% 10%;
+	}
+
+	footer div {
+		display: block;
+		width: 100%;
+	}
+}
